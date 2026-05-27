@@ -305,7 +305,7 @@ function App() {
               cursor: none;
             }
             .footer-signature:hover {
-              transform: scale(1.06) rotate(-2deg);
+              transform: scale(1.06);
               text-shadow: 0 0 25px rgba(var(--accent-rgb), 0.4) !important;
               color: var(--accent) !important;
             }
