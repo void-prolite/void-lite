@@ -197,7 +197,7 @@ function App() {
                     Email
                   </span>
                   <a
-                    href="mailto:void.lite@creative.dev"
+                    href="mailto:void.prolite@gmail.com"
                     style={{
                       fontFamily: 'var(--font-serif)',
                       fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
@@ -210,38 +210,11 @@ function App() {
                     }}
                     className="email-link"
                   >
-                    void.lite@creative.dev
+                    void.prolite@gmail.com
                   </a>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  <span style={{
-                    fontFamily: 'var(--font-sans)',
-                    fontSize: '0.7rem',
-                    fontWeight: 600,
-                    letterSpacing: '0.15em',
-                    color: 'var(--text-muted)',
-                    textTransform: 'uppercase'
-                  }}>
-                    Phone
-                  </span>
-                  <a
-                    href="tel:+1555019900"
-                    style={{
-                      fontFamily: 'var(--font-serif)',
-                      fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
-                      fontWeight: 300,
-                      color: 'var(--text-primary)',
-                      borderBottom: '1px solid var(--accent)',
-                      paddingBottom: '8px',
-                      display: 'inline-block',
-                      transition: 'color 0.3s'
-                    }}
-                    className="phone-link"
-                  >
-                    +1 (555) 019-9900
-                  </a>
-                </div>
+
               </div>
             </div>
 
@@ -266,19 +239,43 @@ function App() {
               </div>
 
               {/* Editorial signature */}
-              <div style={{
-                fontStyle: 'italic',
-                fontFamily: 'var(--font-serif)',
-                fontSize: 'clamp(2rem, 4.5vw, 3.8rem)',
-                fontWeight: 300,
-                color: 'var(--text-primary)',
-                letterSpacing: '-0.02em',
-                lineHeight: 1,
-                marginTop: '-0.75rem',
-                textShadow: '0 0 10px rgba(var(--accent-rgb), 0.1)',
-                transition: 'transform 0.4s var(--transition-smooth), text-shadow 0.4s var(--transition-smooth), color 0.4s var(--transition-smooth)'
-              }} className="footer-signature">
-                Void. Lite
+              <div className="footer-signature-container">
+                <div style={{
+                  fontStyle: 'italic',
+                  fontFamily: 'var(--font-serif)',
+                  fontSize: 'clamp(2rem, 4.5vw, 3.8rem)',
+                  fontWeight: 300,
+                  color: 'var(--text-primary)',
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1,
+                  marginTop: '-0.75rem',
+                  textShadow: '0 0 10px rgba(var(--accent-rgb), 0.1)',
+                  transition: 'text-shadow 0.4s var(--transition-smooth), color 0.4s var(--transition-smooth)'
+                }} className="footer-signature">
+                  Void. Lite
+                </div>
+                {/* Subtle curved underline in red */}
+                <div style={{
+                  position: 'absolute',
+                  bottom: '-12px',
+                  left: '2%',
+                  width: '96%',
+                  pointerEvents: 'none',
+                  opacity: 0.9,
+                }}>
+                  <svg
+                    viewBox="0 0 150 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                  >
+                    <path
+                      className="footer-underline-path"
+                      d="M 4 12 C 40 2, 110 2, 146 12 C 110 6, 40 6, 4 12 Z"
+                      fill="var(--accent)"
+                    />
+                  </svg>
+                </div>
               </div>
 
               <div style={{
@@ -301,13 +298,29 @@ function App() {
             .footer-social-link:hover {
               color: var(--accent) !important;
             }
+            .footer-signature-container {
+              position: relative;
+              display: inline-block;
+              cursor: none;
+              transition: transform 0.4s var(--transition-smooth);
+            }
+            .footer-signature-container:hover {
+              transform: scale(1.06);
+            }
             .footer-signature {
               cursor: none;
+              transition: text-shadow 0.4s var(--transition-smooth), color 0.4s var(--transition-smooth) !important;
             }
-            .footer-signature:hover {
-              transform: scale(1.06);
+            .footer-signature-container:hover .footer-signature {
               text-shadow: 0 0 25px rgba(var(--accent-rgb), 0.4) !important;
               color: var(--accent) !important;
+            }
+            .footer-underline-path {
+              transition: fill 0.4s var(--transition-smooth), filter 0.4s var(--transition-smooth);
+            }
+            .footer-signature-container:hover .footer-underline-path {
+              fill: var(--text-primary) !important;
+              filter: drop-shadow(0 0 6px var(--accent));
             }
             @media (max-width: 768px) {
               footer {
