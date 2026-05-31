@@ -254,28 +254,7 @@ function App() {
                 }} className="footer-signature">
                   Void. Lite
                 </div>
-                {/* Subtle curved underline in red */}
-                <div style={{
-                  position: 'absolute',
-                  bottom: '-12px',
-                  left: '2%',
-                  width: '96%',
-                  pointerEvents: 'none',
-                  opacity: 0.9,
-                }}>
-                  <svg
-                    viewBox="0 0 150 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    style={{ width: '100%', height: 'auto', display: 'block' }}
-                  >
-                    <path
-                      className="footer-underline-path"
-                      d="M 4 12 C 40 2, 110 2, 146 12 C 110 6, 40 6, 4 12 Z"
-                      fill="var(--accent)"
-                    />
-                  </svg>
-                </div>
+
               </div>
 
               <div style={{
@@ -315,13 +294,7 @@ function App() {
               text-shadow: 0 0 25px rgba(var(--accent-rgb), 0.4) !important;
               color: var(--accent) !important;
             }
-            .footer-underline-path {
-              transition: fill 0.4s var(--transition-smooth), filter 0.4s var(--transition-smooth);
-            }
-            .footer-signature-container:hover .footer-underline-path {
-              fill: var(--text-primary) !important;
-              filter: drop-shadow(0 0 6px var(--accent));
-            }
+
             @media (max-width: 768px) {
               footer {
                 padding: 5rem 2rem 3rem 2rem !important;
