@@ -26,7 +26,7 @@ const projectsData = [
       'Dynamic glassmorphic weather cards',
       'Automated location and misty particle system animations'
     ],
-    url: 'https://atmosinsight.vercel.app/'
+    url: 'https://atmos-lite.vercel.app/'
   },
   {
     id: 'launchforge',
@@ -42,7 +42,7 @@ const projectsData = [
       'Ultra-responsive geometric metric dashboards',
       'Cinematic dark mode borders with micro-glows'
     ],
-    url: 'https://forgelaunch.vercel.app/'
+    url: 'https://launch-forge-lite.vercel.app/'
   },
   {
     id: 'tbc',
@@ -58,7 +58,7 @@ const projectsData = [
       'Cinematic image loading and section reveals',
       'Full integration of culinary menu showcase drawer'
     ],
-    url: 'https://thebangalorecafee.vercel.app/'
+    url: 'https://the-bangalore-cafe-lite.vercel.app/'
   },
   {
     id: 'lumina',
@@ -74,7 +74,7 @@ const projectsData = [
       'Bespoke editorial grid structures rejecting default white templates',
       'Interactive premium villa cards and environmental glows'
     ],
-    url: 'https://luminaestates.vercel.app/'
+    url: 'https://lumina-estates-lite.vercel.app/'
   }
 ];
 
